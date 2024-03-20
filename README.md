@@ -1,1 +1,1 @@
-# inertial_properties_estimation
+# lbipe

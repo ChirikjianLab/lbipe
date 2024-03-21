@@ -6,8 +6,6 @@ This is the repo for paper:
 
 published on IEEE Robotics and Automation Letters (RA-L).
 
-For a robot manipulator grasping an unknown object, the mass and center of mass can be identified without using force/torque sensors.
-
 ## Introduction
 
 A learning-based approach is proposed for estimating the mass and center of mass of unknown objects.

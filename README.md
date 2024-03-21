@@ -50,7 +50,7 @@ Please run the scripts `torque_test.py` and `attn_test.py` to evaluate the propo
 You can use the scripts `torque_train.py` and `attn_train.py` to train new models. 
 The provided dataset can be found in `./data` as
 
-- `data_train_<mass>.npz`: 11536 samples of planned configurations of each training object.
-- `data_train_random_<mass>.npz`: 10000 samples of random configurations of each training object.
-- `data_test_<object>.npz`: 1000 samples of random configurations of each testing object.
+- `data_train_<mass>.npz`: 11536 samples at planned configurations of each training object.
+- `data_train_random_<mass>.npz`: 10000 samples at random configurations of each training object.
+- `data_test_<object>.npz`: 1000 samples at random configurations of each testing object.
 

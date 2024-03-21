@@ -15,7 +15,7 @@ The framework requires only encoder measurements without using any force/torque 
 The block diagram is shown below:
 
 <div align='center'>
-  <img src='image/overview.pdf' width='1000px'>
+  <img src='image/overview.png' width='1000px'>
 </div>
 
 (a) Training process. 

@@ -38,18 +38,16 @@ conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvi
 conda deactivate  # exit the virtual environment
 ```
 
-## Dataset
+## Running Pretrained Models
+
+The results in the paper are generated with ten pairs of pretrained torque models and attention models, which are available in `dicts/`. 
+Please run the scripts `torque_test.py` and `attn_test.py` to evaluate the proposed approach using pretrained models.
+
+## Training New Models
+
+You can use the scripts `torque_train.py` and `attn_train.py` to train new models using the provided dataset in `data/`.
 
 - `data/data_train_<mass>.npz`: 65000 samples with contains 10 pretrained models for all five datasets.
 - `data/data_train_random_<mass>.npz`: 65000 samples with contains 10 pretrained models for all five datasets.
 - `data/data_test_<object>.npz`: 1000 random samples with testing object.
 
-## Running Pretrained Models
-
-The results in the paper are generated with ten pairs of torque models and attention models are available in `dicts/`. 
-You can use the scripts `torque_model_test.py` and `attn_model_test.py` to evaluate the torque model and attention model using pretrained models.
-
-## Training New Models
-
-You can use the scripts `torque_model_train.py` and `attn_model_train.py` to train new models using the provided dataset. 
-It should be noted that a torque model should be trained first, as an attention model is trained based on a trained torque model.

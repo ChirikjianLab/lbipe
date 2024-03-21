@@ -31,7 +31,7 @@ The mass and COM of the unknown objects are solved by weighted least squares.
 All code was tested on Ubuntu 20.04 with Python 3.12 and PyTorch 2.2.1. You are suggested to create a virtual environment in conda, activate the environment, and install the required packages.
 
 ```
-conda create --name lbipe_env  # create a vitual environment
+conda create --name lbipe_env python=3.12  # create a vitual environment
 conda activate lbipe_env  # activate the virual environment
 conda install --file requirements.txt  # install required packages
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia  # install pytorch

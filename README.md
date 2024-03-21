@@ -28,26 +28,28 @@ The mass and COM of the unknown objects are solved by weighted least squares.
 
 ## Setup
 
-All code was tested on Ubuntu 20.04 with Python 3.12 and PyTorch 2.2.1. You are suggested to create a virtual environment in conda, activate the environment, and install the required packages.
+All code was tested on Ubuntu 20.04 with Python 3.12 and PyTorch 2.2.1. 
+You are suggested to create a virtual environment in conda, and install the dependencies.
 
 ```
 conda create --name lbipe_env python=3.12  # create a vitual environment
 conda activate lbipe_env  # activate the virual environment
-conda install --file requirements.txt  # install required packages
+conda install --file requirements.txt  # install required python packages
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia  # install pytorch
 conda deactivate  # exit the virtual environment
 ```
 
 ## Running Pretrained Models
 
-The results in the paper are generated with ten pairs of pretrained torque models and attention models, which are available in `dicts/`. 
+The results in the paper are generated with ten pairs of pretrained torque models and attention models, which are available in `./dicts`. 
 Please run the scripts `torque_test.py` and `attn_test.py` to evaluate the proposed approach using pretrained models.
 
 ## Training New Models
 
-You can use the scripts `torque_train.py` and `attn_train.py` to train new models using the provided dataset in `data/`.
+You can use the scripts `torque_train.py` and `attn_train.py` to train new models. 
+The provided dataset can be found in `./data` as
 
-- `data/data_train_<mass>.npz`: 65000 samples with contains 10 pretrained models for all five datasets.
-- `data/data_train_random_<mass>.npz`: 65000 samples with contains 10 pretrained models for all five datasets.
-- `data/data_test_<object>.npz`: 1000 random samples with testing object.
+- `data_train_<mass>.npz`: 11536 samples of planned configurations of each training object.
+- `data_train_random_<mass>.npz`: 10000 samples of random configurations of each training object.
+- `data_test_<object>.npz`: 1000 samples of random configurations of each testing object.
 

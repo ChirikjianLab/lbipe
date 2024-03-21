@@ -30,6 +30,7 @@ The mass and COM of the unknown objects are solved by weighted least squares.
 
 All code was tested on Ubuntu 20.04 with Python 3.12 and PyTorch 2.2.1. 
 You are suggested to create a virtual environment in conda, and install the dependencies.
+A sample code is as follows:
 
 ```
 conda create --name lbipe_env python=3.12  # create a vitual environment

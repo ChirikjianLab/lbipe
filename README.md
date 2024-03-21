@@ -1,13 +1,32 @@
-# Learning-Based Inertial Properties Estimation
+# Learning-Based Inertial Properties Estimation (lbipe)
 
-This is the code for the paper
+This is the repo for paper:
 
-> [**A Learning-Based Approach for Estimating Inertial Properties of Unknown Objects From Encoder Discrepancies**](https://ieeexplore.ieee.org/document/10176292)  
-> Zizhou Lao, Yuanfeng Han, Yunshan Ma, Gregory S. Chirikjian
+> [**A Learning-Based Approach for Estimating Inertial Properties of Unknown Objects From Encoder Discrepancies**](https://ieeexplore.ieee.org/document/10176292)
 
 published on IEEE Robotics and Automation Letters (RA-L).
 
 For a robot manipulator grasping an unknown object, the mass and center of mass can be identified without using force/torque sensors.
+
+## Introduction
+
+A learning-based approach is proposed for estimating the mass and center of mass of unknown objects.
+The framework requires only encoder measurements without using any force/torque sensors, but still maintains accurate estimation capability.
+The block diagram is shown below:
+
+<div align='center'>
+  <img src='image/overview.pdf' width='1000px'>
+</div>
+
+(a) Training process. 
+The training data are collected using known objects. 
+The torque model is then trained using the derived ground truth of joint torque. 
+Subsequently, the attention model is trained based on the trained torque model. 
+
+(b) Testing process. 
+The testing data are collected using unknown objects. 
+The torque model is utilized to estimate the joint torque, while the attention model generates the weight matrix. 
+The mass and COM of the unknown objects are solved by weighted least squares.
 
 ## Setup
 
